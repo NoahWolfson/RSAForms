@@ -34,6 +34,7 @@
             EncryptedMessage = new Label();
             Send = new Button();
             EncryptMessage = new Button();
+            Message = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(357, 181);
+            label2.Location = new Point(357, 178);
             label2.Name = "label2";
             label2.Size = new Size(53, 15);
             label2.TabIndex = 1;
@@ -85,7 +86,7 @@
             // 
             // EncryptMessage
             // 
-            EncryptMessage.Location = new Point(351, 254);
+            EncryptMessage.Location = new Point(351, 249);
             EncryptMessage.Name = "EncryptMessage";
             EncryptMessage.Size = new Size(75, 23);
             EncryptMessage.TabIndex = 5;
@@ -93,11 +94,19 @@
             EncryptMessage.UseVisualStyleBackColor = true;
             EncryptMessage.Click += EncryptMessage_Click;
             // 
+            // Message
+            // 
+            Message.Location = new Point(336, 196);
+            Message.Name = "Message";
+            Message.Size = new Size(100, 23);
+            Message.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Message);
             Controls.Add(EncryptMessage);
             Controls.Add(Send);
             Controls.Add(EncryptedMessage);
@@ -118,5 +127,6 @@
         private Label EncryptedMessage;
         private Button Send;
         private Button EncryptMessage;
+        private TextBox Message;
     }
 }

@@ -36,10 +36,10 @@
             label3 = new Label();
             PublicKey = new Label();
             PrivateKey = new Label();
-            button1 = new Button();
             button2 = new Button();
             label4 = new Label();
             label5 = new Label();
+            BobEncryptedMessage = new Label();
             SuspendLayout();
             // 
             // label1
@@ -88,19 +88,9 @@
             PrivateKey.TabIndex = 4;
             PrivateKey.Text = "Public Key";
             // 
-            // button1
-            // 
-            button1.Location = new Point(294, 184);
-            button1.Name = "button1";
-            button1.Size = new Size(199, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Send public Key To Alice";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // button2
             // 
-            button2.Location = new Point(308, 273);
+            button2.Location = new Point(296, 198);
             button2.Name = "button2";
             button2.Size = new Size(158, 23);
             button2.TabIndex = 6;
@@ -111,11 +101,12 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(349, 304);
+            label4.Location = new Point(349, 236);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 7;
             label4.Text = "Message";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -125,15 +116,24 @@
             label5.Size = new Size(0, 15);
             label5.TabIndex = 8;
             // 
+            // BobEncryptedMessage
+            // 
+            BobEncryptedMessage.AutoSize = true;
+            BobEncryptedMessage.Location = new Point(349, 180);
+            BobEncryptedMessage.Name = "BobEncryptedMessage";
+            BobEncryptedMessage.Size = new Size(53, 15);
+            BobEncryptedMessage.TabIndex = 9;
+            BobEncryptedMessage.Text = "Message";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BobEncryptedMessage);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(PrivateKey);
             Controls.Add(PublicKey);
             Controls.Add(label3);
@@ -152,9 +152,9 @@
         private Label label3;
         private Label PublicKey;
         private Label PrivateKey;
-        private Button button1;
         private Button button2;
         private Label label4;
         private Label label5;
+        private Label BobEncryptedMessage;
     }
 }
